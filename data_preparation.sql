@@ -9,6 +9,8 @@ FROM syscolumns
 WHERE id = object_id('CovidDeaths')
   AND isnullable = 1;
 
+
+
 -- copy output and run the scripts
 UPDATE CovidDeaths SET iso_code = NULL WHERE iso_code = '';
 UPDATE CovidDeaths SET continent = NULL WHERE continent = '';
